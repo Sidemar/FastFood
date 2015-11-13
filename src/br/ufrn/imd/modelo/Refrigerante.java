@@ -8,6 +8,14 @@ public class Refrigerante {
     private int id;
     private String nome;
 
+    public Refrigerante() {
+    }
+
+    public Refrigerante(int id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
+
     /**
      * @return the id
      */
