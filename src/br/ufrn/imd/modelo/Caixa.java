@@ -8,12 +8,8 @@ import java.util.Queue;
  * @author Sidemar
  */
 public class Caixa {
-    private Queue<Cliente> fila;
+    
     private String tipo;
-
-    public Caixa() {
-        fila = new LinkedList();
-    }
 
     public String getTipo() {
         return tipo;
@@ -23,23 +19,7 @@ public class Caixa {
         this.tipo = tipo;
     }
     
-    public void adicionar(Cliente cliente) {
-        this.fila.add(cliente);
-    }
-    
-    public void remover() {
-        this.fila.remove();
-    }
-    
-    public void atender() {
+    public void abriPedido(Cliente cliente) {
         
-    }
-
-    public Queue<Cliente> getFila() {
-        return fila;
-    }
-
-    public void setFila(Queue<Cliente> fila) {
-        this.fila = fila;
     }
 }

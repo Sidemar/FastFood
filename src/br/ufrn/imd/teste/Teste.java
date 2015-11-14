@@ -7,6 +7,7 @@ package br.ufrn.imd.teste;
 
 import br.ufrn.imd.modelo.Caixa;
 import br.ufrn.imd.modelo.Cliente;
+import br.ufrn.imd.modelo.Loja;
 
 /**
  *
@@ -15,22 +16,28 @@ import br.ufrn.imd.modelo.Cliente;
 public class Teste {
     public static void main(String[] args) {
         Caixa ca = new Caixa();
+        Loja lo = new Loja();
         Cliente c1 = new Cliente();
         Cliente c2 = new Cliente();
         c1.setNome("c1");
         c2.setNome("c2");
-        ca.adicionar(c1);
-        for(Cliente c : ca.getFila()) {
+        lo.adicionar(c1);
+        for(Cliente c : lo.getFila()) {
             System.out.println(c.getNome());
         }
         System.out.println("");
-        ca.adicionar(c2);
-        for(Cliente c : ca.getFila()) {
+        lo.adicionar(c2);
+        for(Cliente c : lo.getFila()) {
             System.out.println(c.getNome());
         }
         System.out.println("");
-        ca.remover();
-        for(Cliente c : ca.getFila()) {
+        //lo.remover();
+        //for(Cliente c : lo.getFila()) {
+        //    System.out.println(c.getNome());
+        //}
+        System.out.println(lo.getFila().peek().getNome());
+        System.out.println("");
+        for(Cliente c : lo.getFila()) {
             System.out.println(c.getNome());
         }
     }

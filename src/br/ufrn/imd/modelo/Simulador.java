@@ -34,10 +34,10 @@ public class Simulador {
         // Deve ser aleatório
         // Devem ser criadas 3 Theads dos caixas para receber os cliente, isso 
         // porque os clientes podem chegar simultaneamente
-        caixaAtendimento1.adicionar(cliente1);
-        caixaAtendimento1.adicionar(cliente2);
-        caixaAtendimento2.adicionar(cliente3);
-        caixaAtendimento2.adicionar(cliente4);
-        caixaAtendimento3.adicionar(cliente5);
+        //caixaAtendimento1.adicionar(cliente1);
+        //caixaAtendimento1.adicionar(cliente2);
+        //caixaAtendimento2.adicionar(cliente3);
+        //caixaAtendimento2.adicionar(cliente4);
+        //caixaAtendimento3.adicionar(cliente5);
     }
 }
