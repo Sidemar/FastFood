@@ -1,6 +1,7 @@
 package br.ufrn.imd.teste;
 
-import br.ufrn.imd.modelo.Caixa;
+import br.ufrn.imd.modelo.CaixaAtendimento;
+import br.ufrn.imd.modelo.CaixaPagamento;
 import br.ufrn.imd.modelo.Cliente;
 import br.ufrn.imd.modelo.Loja;
 import java.util.Random;
@@ -12,17 +13,17 @@ public class Simulador {
         Loja loja = new Loja();
         
         // 3 Caixas para atendimento 
-        Caixa caixaAtendimento1 = new Caixa();
-        Caixa caixaAtendimento2 = new Caixa();
-        Caixa caixaAtendimento3 = new Caixa();
+        CaixaAtendimento caixaAtendimento1 = new CaixaAtendimento();
+        CaixaAtendimento caixaAtendimento2 = new CaixaAtendimento();
+        CaixaAtendimento caixaAtendimento3 = new CaixaAtendimento();
         
         // Caixas adicionados na loja
         loja.adicionarCaixa(caixaAtendimento1);
         loja.adicionarCaixa(caixaAtendimento2);
         loja.adicionarCaixa(caixaAtendimento3);
         
-        // 1 Caixa para atendimento
-        Caixa caixaPagamento1 = new Caixa();
+        // 1 Caixa para pagamento
+        CaixaPagamento caixaPagamento1 = new CaixaPagamento();
         
         // Simulando a chegada de 5 clientes
         Cliente cliente1 = new Cliente();

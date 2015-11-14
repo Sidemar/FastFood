@@ -1,42 +1,22 @@
 package br.ufrn.imd.modelo;
 
-public class Refrigerante {
-    private int id;
-    private String nome;
+public class Refrigerante extends Item{
+    private int quantidade;
 
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+    
     public Refrigerante() {
     }
 
-    public Refrigerante(int id, String nome) {
-        this.id = id;
-        this.nome = nome;
+    public Refrigerante(int id, String nome, int quantidade) {
+        super(id, nome);
+        this.quantidade = quantidade;
     }
-
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    /**
-     * @return the nome
-     */
-    public String getNome() {
-        return nome;
-    }
-
-    /**
-     * @param nome the nome to set
-     */
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    
 }

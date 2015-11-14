@@ -3,16 +3,7 @@ package br.ufrn.imd.modelo;
 public class Ingrediente {
     private int id;
     private String nome;
-    private int quantidade;
-
-    public Ingrediente() {
-    }
-
-    public Ingrediente(int id, String nome, int quantidade) {
-        this.id = id;
-        this.nome = nome;
-        this.quantidade = quantidade;
-    }
+    private int quantidae;
 
     public int getId() {
         return id;
@@ -30,11 +21,20 @@ public class Ingrediente {
         this.nome = nome;
     }
 
-    public int getQuantidade() {
-        return quantidade;
+    public Ingrediente(int id, String nome, int quantidae) {
+        this.id = id;
+        this.nome = nome;
+        this.quantidae = quantidae;
     }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public Ingrediente() {
+    }
+
+    public int getQuantidae() {
+        return quantidae;
+    }
+
+    public void setQuantidae(int quantidae) {
+        this.quantidae = quantidae;
     }
 }

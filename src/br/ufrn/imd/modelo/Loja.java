@@ -6,13 +6,13 @@ import java.util.Queue;
 import java.util.Random;
 
 public class Loja {
-    private ArrayList<Caixa> caixas;
+    private ArrayList<CaixaAtendimento> caixas = new ArrayList<>();
 
-    public ArrayList<Caixa> getCaixas() {
+    public ArrayList<CaixaAtendimento> getCaixas() {
         return caixas;
     }
 
-    public void setCaixas(ArrayList<Caixa> caixas) {
+    public void setCaixas(ArrayList<CaixaAtendimento> caixas) {
         this.caixas = caixas;
     }
     private Queue<Cliente> fila;
@@ -22,7 +22,7 @@ public class Loja {
         fila = new LinkedList<>();
     }
     
-    public void adicionarCaixa(Caixa caixa) {
+    public void adicionarCaixa(CaixaAtendimento caixa) {
         this.caixas.add(caixa);
     }
     

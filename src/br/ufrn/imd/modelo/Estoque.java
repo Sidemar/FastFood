@@ -3,16 +3,14 @@ package br.ufrn.imd.modelo;
 import java.util.ArrayList;
 
 public class Estoque {
-    ArrayList<Refrigerante> refrigerantes;
-    ArrayList<Ingrediente> ingredientes;
+    ArrayList<Refrigerante> refrigerantes = new ArrayList<>();
+    ArrayList<Ingrediente> ingredientes = new ArrayList<>();
 
     public Estoque() {
-        this.refrigerantes = new ArrayList<>();
-        
         // Inicialização especificada
-        Refrigerante refrigerante1 = new Refrigerante(1, "Cola");
-        Refrigerante refrigerante2 = new Refrigerante(2, "Guaraná");
-        Refrigerante refrigerante3 = new Refrigerante(3, "Uva");
+        Refrigerante refrigerante1 = new Refrigerante(1, "Cola", 10);
+        Refrigerante refrigerante2 = new Refrigerante(2, "Guaraná", 10);
+        Refrigerante refrigerante3 = new Refrigerante(3, "Uva", 10);
         
         // Tipo 1 - Americano: pão, presunto, queijo, ovo, alface, tomate e maionese. 
         Ingrediente ingrediente1 = new Ingrediente(1, "Presunto", 10);
