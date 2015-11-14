@@ -1,9 +1,5 @@
 package br.ufrn.imd.modelo;
 
-/**
- *
- * @author Sidemar
- */
 public class Refrigerante {
     private int id;
     private String nome;

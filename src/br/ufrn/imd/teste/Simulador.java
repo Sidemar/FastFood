@@ -1,9 +1,10 @@
-package br.ufrn.imd.modelo;
+package br.ufrn.imd.teste;
 
-/**
- *
- * @author Sidemar
- */
+import br.ufrn.imd.modelo.Caixa;
+import br.ufrn.imd.modelo.Cliente;
+import br.ufrn.imd.modelo.Loja;
+import java.util.Random;
+
 public class Simulador {
     
     public void iniciar() {
@@ -30,14 +31,21 @@ public class Simulador {
         Cliente cliente4 = new Cliente();
         Cliente cliente5 = new Cliente();
         
-        // Clientes colocados nos caixas de atendimento
-        // Deve ser aleatório
-        // Devem ser criadas 3 Theads dos caixas para receber os cliente, isso 
-        // porque os clientes podem chegar simultaneamente
-        //caixaAtendimento1.adicionar(cliente1);
-        //caixaAtendimento1.adicionar(cliente2);
-        //caixaAtendimento2.adicionar(cliente3);
-        //caixaAtendimento2.adicionar(cliente4);
-        //caixaAtendimento3.adicionar(cliente5);
+        loja.adicionarCliente(cliente1);
+        loja.adicionarCliente(cliente2);
+        loja.adicionarCliente(cliente3);
+        loja.adicionarCliente(cliente4);
+        loja.adicionarCliente(cliente5);
+        
+        // Adicionando os clientes aos caixas aleatoriamente
+        final int NUM_CLIENTES = loja.getFila().size();
+        for (int i = 0; i < NUM_CLIENTES; i++) {
+            loja.atender();
+        }
+    }
+    
+    public static void main(String[] args) {
+        Simulador simulador = new Simulador();
+        simulador.iniciar();
     }
 }

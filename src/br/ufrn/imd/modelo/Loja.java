@@ -5,12 +5,16 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
 
-/**
- *
- * @author Sidemar
- */
 public class Loja {
     private ArrayList<Caixa> caixas;
+
+    public ArrayList<Caixa> getCaixas() {
+        return caixas;
+    }
+
+    public void setCaixas(ArrayList<Caixa> caixas) {
+        this.caixas = caixas;
+    }
     private Queue<Cliente> fila;
 
     public Loja() {
@@ -22,11 +26,11 @@ public class Loja {
         this.caixas.add(caixa);
     }
     
-    public void adicionar(Cliente cliente) {
+    public void adicionarCliente(Cliente cliente) {
         this.fila.add(cliente);
     }
     
-    public void remover() {
+    public void removerCliente() {
         this.fila.remove();
     }
     
@@ -39,7 +43,7 @@ public class Loja {
     }
     
     public void atender() {
-        Cliente cliente = fila.peek();
+        Cliente cliente = fila.remove();
         Random gerador = new Random(); 
         int numeroCaixa = gerador.nextInt(caixas.size());
         caixas.get(numeroCaixa).abriPedido(cliente);

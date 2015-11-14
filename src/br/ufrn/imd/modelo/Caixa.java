@@ -1,12 +1,5 @@
 package br.ufrn.imd.modelo;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
-/**
- *
- * @author Sidemar
- */
 public class Caixa {
     
     private String tipo;

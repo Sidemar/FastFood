@@ -2,10 +2,6 @@ package br.ufrn.imd.modelo;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Sidemar
- */
 public class Pedido {
     private int id;
     private ArrayList<Item> itens;
